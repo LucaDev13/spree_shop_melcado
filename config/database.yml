@@ -3,7 +3,7 @@ default: &default
   encoding: unicode
   host: db
   username: postgres
-  password: password
+  password: <%= Rails.application.credentials.postgres_password %>
   pool: 5
 
 development:
