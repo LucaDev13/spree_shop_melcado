@@ -1,11 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* Ruby version
+* Ruby version ruby-2.7.0
+* Rails 6.0.3.3
 
 * System dependencies
 
@@ -21,4 +18,4 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* https://docs.docker.com/compose/rails/
