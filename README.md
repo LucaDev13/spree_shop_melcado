@@ -9,7 +9,9 @@
 * Configuration
   - Create and manage secrets as described in [Rails guides](https://guides.rubyonrails.org/security.html#environmental-security)
   - Use Docker compose to start the app as described in [Docker docs](https://docs.docker.com/compose/rails)
-* Database creation
+  - Install Spree as described in [Spree docs](https://github.com/spree/spree/tree/4-1-stable#installation-options)
+* Run migrations
+  - run `docker-compose run web rails db:migrate`
 
 * Database initialization
 
