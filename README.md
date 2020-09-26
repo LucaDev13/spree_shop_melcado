@@ -7,7 +7,8 @@
 * System dependencies
 
 * Configuration
-
+  - Create and manage secrets as described in [Rails guides](https://guides.rubyonrails.org/security.html#environmental-security)
+  - Use Docker compose to start the app as described in [Docker docs](https://docs.docker.com/compose/rails)
 * Database creation
 
 * Database initialization
@@ -18,4 +19,3 @@
 
 * Deployment instructions
 
-* https://docs.docker.com/compose/rails/
