@@ -6,8 +6,8 @@ RUN mkdir /spree
 WORKDIR /spree
 COPY Gemfile /spree/Gemfile
 COPY Gemfile.lock /spree/Gemfile.lock
-RUN bundle install
 RUN bundle update
+RUN bundle install
 COPY . /spree
 
 # Add a script to be executed every time the container starts.
