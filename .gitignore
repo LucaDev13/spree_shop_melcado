@@ -34,4 +34,8 @@
 yarn-debug.log*
 .yarn-integrity
 
+# Ignore intellij filesq
 /.idea/*
+
+# Ignore env files
+*.env
