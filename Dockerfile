@@ -11,8 +11,9 @@ COPY Gemfile /myapp/Gemfile
 COPY Gemfile.lock /myapp/Gemfile.lock
 
 RUN gem install bundler -v 2.1.2
-RUN bundle config build.nokogiri --use-system-libraries
-RUN bundle check || bundle install
+RUN gem install nokogiri -v '1.10.10' --source https://rubygems.org
+RUN bundle install
+RUN bundle update
 COPY . /myapp
 
 # Add a script to be executed every time the container starts.
