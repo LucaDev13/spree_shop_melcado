@@ -6,7 +6,7 @@ services:
       - ./tmp/db:/var/lib/postgresql/data
     restart: always
     env_file:
-      - .env
+      - .travis.yml
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'; env"
@@ -17,4 +17,4 @@ services:
     depends_on:
       - db
     env_file:
-      - .env
+      - .travis.yml
