@@ -18,3 +18,4 @@ before_install:
 script:
 - docker-compose build
 - docker-compose up
+- rails generate rspec:install
