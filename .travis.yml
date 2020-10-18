@@ -18,4 +18,4 @@ before_install:
 script:
 - docker-compose -f docker-compose-test.yml build 
 - docker-compose -f docker-compose-test.yml up 
-- docker-compose run web bundle exec rspec
+- docker-compose -f docker-compose-test.yml run web bundle exec rspec
