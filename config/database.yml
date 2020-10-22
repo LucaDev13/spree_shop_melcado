@@ -9,7 +9,6 @@ default: &default
 
 development:
   <<: *default
-  min_messages: debug5
 
 test:
   <<: *default
