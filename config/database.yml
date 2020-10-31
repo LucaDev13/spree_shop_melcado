@@ -1,7 +1,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: <%= ENV.fetch("POSTGRES_HOST", 'localhost') %>
+  host: <%= Rails.application.credentials.POSTGRES_HOST %>
   database: <%= Rails.application.credentials.POSTGRES_DB %>
   username: <%= Rails.application.credentials.PGUSER %>
   password: <%= Rails.application.credentials.PGPASSWORD %>
