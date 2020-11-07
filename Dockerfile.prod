@@ -9,12 +9,14 @@ RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
 COPY Gemfile.lock /myapp/Gemfile.lock
-
+# ENV RAILS_ENV production
+# ENV RACK_ENV production
 
 RUN gem install bundler -v 2.1.2
 RUN gem install nokogiri -v '1.10.10' --source https://rubygems.org
 RUN bundle install
 RUN bundle update
+# RUN RAILS_ENV=production rails assets:precompile
 COPY . /myapp
 
 # Add a script to be executed every time the container starts.

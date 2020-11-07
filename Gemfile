@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem "aws-sdk-s3", require: false
+
 gem 'spree', '~> 4.1'
 gem 'spree_auth_devise', '~> 4.1'
 gem 'spree_gateway', '~> 3.7'
