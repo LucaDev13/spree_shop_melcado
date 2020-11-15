@@ -5,7 +5,7 @@ default:
       url: /t/tech
       items:
         - :title: Bluetooth earphones
-          :url: /t/tech/bluetooth_earphones
+          :url: /t/tech/bluetooth-earphones
       promo_banners:
         - subtitle: New arrivals
           title: Autumm 2020
