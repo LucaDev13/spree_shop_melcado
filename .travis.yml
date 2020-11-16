@@ -19,3 +19,8 @@ script:
 - docker-compose -f docker-compose-test.yml build 
 - docker-compose -f docker-compose-test.yml up 
 - docker-compose -f docker-compose-test.yml run web bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure: PUTUOtU+9vnkTkpP4ZM0EZPoaBvG16suy+8XV2wS83Byqgwv0UFtEEV8BtGDrvgzuhJaG2T3f1gU1xNWjBzOvp7YLOpD29TmYaigYYzctkDqhr+tCVOeRGX+QLrnCpwB1nnLHCV5VD0Bsl7GZO9MMrHYEQ4aZqEwNDAM0VbcrZBNMrUPuzdgRpBRBNgXynNLXublTp0aNfVQ7Aen5XmOHuCm1wPr74OXxKe5kEPKneZcKHQeSUE2u3oyrrP3Vj2e+vinhQmYwZZnx3z3eLkolVkPmn5q2zcs4jGIUvoGTDRheOEqAinpWRJ2TCiVLHhoyV0yLy/vVSTVpt0U0v4uexBctBIzU29D/4bgl6K1emDlIJKQ+MQLBivl9rWsdsy07Kj0BZbEQ0FNNnmi6fmJw49DYafBnFaL8H4r1FumJD13nUCe5OIeamFAMM15L0d9+uw/mxHGOlHamLyAn4MWho/p/wXE+FkJyRNOC9zIn7QSXMpGlZqT7DdZIbrgJjpCmiovML8ea/HNjPrOsUeSzK+dk6m80KqFQ0KAIyrNYBEvgBWpphKvfJ1b7uZxZ04PvrZwEfBwNeGbYxBwqMYfkeNwof7vzjKlh5O4cL0h8/5ZYZrR3Ro+VF5V38NOa0Gal4eObo+AwVouHOEKsXESHT8luKq7e6BfpsYzQiCTS3k=
+  app: shop-melcado
