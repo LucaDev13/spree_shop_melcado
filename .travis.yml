@@ -17,7 +17,7 @@ before_install:
 - sudo mv docker-compose /usr/local/bin
 script:
 - docker-compose -f docker-compose.yml build 
-- docker-compose f docker-compose.yml run web rails db:migrate
+- docker-compose -f docker-compose.yml run web rails db:migrate
 - docker-compose -f docker-compose.yml up
 - docker-compose -f docker-compose.yml run web bundle exec rspec
 deploy:
