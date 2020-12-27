@@ -15,4 +15,3 @@ test:
 
 production:
   <<: *default
-  database: spree_rails_prod
