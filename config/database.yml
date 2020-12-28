@@ -1,17 +1,14 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: <%= Rails.application.credentials.POSTGRES_HOST! %>
-  database: <%= Rails.application.credentials.POSTGRES_DB! %>
-  username: <%= Rails.application.credentials.PGUSER! %>
-  password: <%= Rails.application.credentials.PGPASSWORD! %>
+  url: <%= Rails.application.credentials.DATABASE_URL! %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-
 development:
   <<: *default
-
+  database: myapp_development
 test:
   <<: *default
-
+  database: myapp_test
 production:
   <<: *default
+  url: <%= Rails.application.credentials.DATABASE_URL! %>
