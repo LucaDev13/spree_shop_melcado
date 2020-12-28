@@ -3,6 +3,8 @@ services:
 - docker
 env:
   COMPOSE_VERSION: 1.27.4
+  global:
+  - secure: "i1gZc69hJ8uWKzalEECZtVnBi9pDgFQibbUsaQgRASrICjAau4iRl1LuCyYbwD2DWZrcrtjKKZzJB2jDCzRlj/xpFI3VEPlWd49N7t40bDlkJ5i9jvHdGKkILgZuYBu337g8byEdLnAodXUlsHeg4GjGOPMbcLBeEM2Igr0gVP0GGkSdfPJhovASYrrM2GX0JNwNhiE3yyv4KEBI+wfeKliBweVqtXNS/BG2wiTJslNq4y+6hf7lGIOpJ9zLOK29rpVREHSLEtIO1EnjG1OsDqgMtYH7fE9m4r/8NkKaVl+m4C66PH2CEoY6cra84VgnyKRMA3h7IBUiSDXLhTNu4Mh1GpS+fJ9XS437fDE19t+I0k/pfaUuFg1j5awblVj9ntUzOQf+hcrSfvBFswx60qy0QNRahw2Us9qVbQ90Gj9WeYaw1XD72AGnkVAgapR+gvicJ6dylfrrFpwriTH6sCgpeHeTgeo+2JTGL3CxIL3+usqtL1Lawe+c20YZKFl1TqMw1exYM14b90Hy/phsUhZDxyt7HjVU93anVwbzmSr5ITxRJCuxREdH+MDnJBLUtoMYejW/ev1fwYHHpuxTZWy0Z3KHnBQV3PBtXZJEVfsLG1k3TpZN4TMzixY0SUTdo2GniKx2FGU6btgo/4lagqLDuprRROuwYUGto3f/4BE="
 before_install:
 - curl -L https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-`uname
   -s`-`uname -m` > docker-compose
