@@ -14,10 +14,10 @@ before_install:
 script:
 - docker-compose build
 - docker-compose up -d
-- docker-compose run web rails db:migrate --trace
 - docker-compose run web bundle exec rspec
 deploy:
   provider: heroku
   api_key:
     secure: Y4q0krjS/K7/YRDIwlxNijmJlQXkNJJUICW4JbmzGFDWZvHzqnCbhaJH3wNnmrdJl2FMRiI+V0ZwlJLQK8DBiiPtE5qyroGJe0wTAzHwHHyenkEOqmGbn6mxTYJ/yjDoOisCI+ZpaJt84Tz+VKD3q/8gkmgJg64I82eAkYMf7UXZVU96ebTxF20BOoYNiAKe5qidwok5J48QvYNyDWdwYYIwvG6E5h6Tc34cAanMsiowMaSNbsFbu4lpLtVmX4jWmln65WdP11poksfcntnU/rf/V60Tp7R2ZJjkkpp3/Nw1FVWtQF7t1pj+2VtENwHMEjnsUmzeFkhS8PmStmRDcrOy+n1O1al4jD5YgGO6q+ptRdlw4GMuTXFjZhgpzpzw/tkzXEjX2jaq3s4cGXd4ob64axn3E85EAWqhmUMkcHQtchm1iFOK5CHbMxNiNKxoxwr5kU8MjtdOWVqaiPcqaZRVIhKO+p1qvrpG8UDlwE0gVa8zjDDc7Q2a2jFLpGd1FT32A6aDwv6CyG0iHzAeBQJf1p5JdY7BoH8MFd0C5eq1UZqJCfDCziTTClfOCwbibNI8DiTw2PbCvcLDtFuvpeiDqJlz01UZp/Q/rTc4SsZBfXzyoVv7iJPy/CBIinITBTHDV3sKdHKMW3dmVEhCSBCVpl1Irft+aTjbnYFqkPg=
+  run: "rails db:migrate"
   app: shop-melcado
