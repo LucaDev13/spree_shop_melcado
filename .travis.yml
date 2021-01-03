@@ -17,7 +17,6 @@ script:
 - docker-compose run web bundle exec rspec
 deploy:
   provider: heroku
-  api_key:
-    secure: gtP3b0Kv82EEEYyLvZOom2sAW9do0inQ30EAGGe2eImwoXGbqla8qCz2YB6+QwO4XYJeM6OMHwd+cgmZ5+uPsIVcI6RBJ94MjRRsW/C7p1dNjFiOtXpOW0o6mIuC6vNMOp+b4gi/7XRPtu2lfWB8ExOowBMGofk69s3CzM7NqN3TmpZ4v5VrcRYvGnChpqhLPnpxhS4K+gRMKtd8qEK7LQaiv1700lv/qiDxlYOg7lRPJhT6QzvRcQ06UR0CbXC25t2p5/fc9Jm+oa6AL81UQWVJWyKInfY2ScQhegLNERQzMeaBoOaVeEr4pWJTu7uTB/WW1UsFDMRiTwXRI+YDSXDTCn0ni7tqfnmVfYRlhk/mvPIrkfEhJE4ckx063lo4d7s5pHc++WpEjmW/VshPWpJe7suO5ULUDWzdsOkXrqPQEkF1fpDJXcp8HVfvQS8K2hVo9+8GzSdoKxVmfr6HZn3BzNTu4djmnanphd+BeHsfBwoxFvL6oKM9OK7WACWnmWe3htd69FSmwm+1TCWq9xa530YnrTH4bGvFr4+c9mGl5IxRQ/Y1Hq7raTYZJ6YRouo0nAzPgUAa5ss43HQons8eDvX3YUCvtsjXSdn5279qZta2V+ls2bDhxFVuVeKw9o8srJFXDGWqaoBmAJOAPV9uwW6BPsixoTi5INgjT9U=
+  api_key: $heroku_api_key
   run: rails db:migrate
   app: shop-melcado
