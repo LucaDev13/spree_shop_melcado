@@ -4,14 +4,14 @@
   <img class="lazyload hero-image position-absolute"
     data-src="<%= asset_path('homepage/main_banner.jpg') %>"
     data-srcset="<%= image_source_set('homepage/main_banner') %>"
-    alt="<%= Spree.t('homepage.autumn_sales')%>" />
+    alt="<%= Spree.t('homepage.spring_sales')%>" />
 
   <div class="hero-content">
     <div class="homepage-hero-image-text mb-2 mx-auto pb-3 pb-md-4">
-      <%= Spree.t('homepage.autumn_sales') %>
+      <%= Spree.t('homepage.spring_sales') %>
     </div>
     <div>
-      <%= link_to Spree.t('homepage.shop_now'), spree.products_path, class: 'btn btn-primary spree-btn px-5' %>
+      <%= link_to Spree.t('homepage.shop_now'), spree.products_path, class: 'btn btn-primary spree-btn' %>
     </div>
   </div>
 </div>
@@ -71,7 +71,7 @@
 
 <div class="homepage-fashion-trends-box mb-3">
   <div class="text-center">
-    <div class="homepage-fashion-trends-box-summer-text mb-1"><%= Spree.t('homepage.summer_2019') %></div>
+    <div class="homepage-fashion-trends-box-summer-text mb-1"><%= Spree.t('homepage.spring_2021') %></div>
     <div class="homepage-fashion-trends-box-fashion-trends-text mb-2"><%= Spree.t('homepage.fashion_trends') %></div>
     <div class="homepage-fashion-trends-box-description-text text-center mb-3">
       <%= Spree.t('homepage.fashion_trends_note') %>
@@ -111,11 +111,11 @@
           <img class="w-100 lazyload"
             data-src="<%= asset_path('homepage/promo_banner_right.jpg') %>"
             data-srcset="<%= image_source_set('homepage/promo_banner_right') %>"
-            alt="<%= Spree.t('homepage.summer_sale')%>" />
+            alt="<%= Spree.t('homepage.spring_sale')%>" />
 
           <div class="homepage-bottom-box-inner">
             <div class="homepage-bottom-box-inner-small-text">
-              <%= Spree.t('homepage.summer_sale') %>
+              <%= Spree.t('homepage.spring_sale') %>
             </div>
             <div class="homepage-bottom-box-inner-big-text">
               <%= Spree.t('homepage.up_to_60') %>
