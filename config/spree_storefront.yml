@@ -19,14 +19,8 @@ default:
       subtitle: Categories
       url: /t/women
       items:
-        - :title: Skirts
-          :url: /t/women/skirts
         - :title: Dresses
           :url: /t/women/dresses
-        - :title: Shirts and Blouses
-          :url: /t/women/shirts-and-blouses
-        - :title: Sweaters
-          :url: /t/women/sweaters
         - :title: Tops and T-shirts
           :url: /t/women/tops-and-t-shirts
         - :title: Jackets and Coats
@@ -48,8 +42,6 @@ default:
           :url: /t/men/shirts
         - :title: T-shirts
           :url: /t/men/t-shirts
-        - :title: Sweaters
-          :url: /t/men/sweaters
         - :title: Jackets and Coats
           :url: /t/men/jackets-and-coats
       promo_banners:
@@ -69,8 +61,8 @@ default:
           :url: /t/sportswear/tops
         - :title: Sweatshirts
           :url: /t/sportswear/sweatshirts
-        - :title: Pants
-          :url: /t/sportswear/pants
+        - :title: Hats
+          :url: /t/sportswear/hats
       promo_banners:
         - subtitle: New collection
           title: Autumm 2020
