@@ -8,8 +8,8 @@ default:
           :url: /t/tech/bluetooth-earphones
       promo_banners:
         - subtitle: New arrivals
-          title: Autumm 2020
-          url: /t/new-arrivals/Autumm-2020
+          title: Tech items 2021
+          url: /t/new-arrivals/2021
           image: 'meganav/promo_banner_left-first-category.jpg'
         - subtitle: Special Offers
           title: Get up to 30% off
@@ -27,8 +27,8 @@ default:
           :url: /t/women/jackets-and-coats
       promo_banners:
         - subtitle: New collection
-          title: Autumm 2020
-          url: /t/new-collection/Autumm-2020
+          title: Spring/Summer 2021
+          url: /t/new-collection/spring-summer-2021
           image: 'meganav/promo_banner_left-first-category.jpg'
         - subtitle: Special Offers
           title: Get up to 30% off
@@ -46,8 +46,8 @@ default:
           :url: /t/men/jackets-and-coats
       promo_banners:
         - subtitle: New collection
-          title: Autumm 2020
-          url: /t/new-collection/Autumm-2020
+          title: Spring/summer 2021
+          url: /t/new-collection/spring-summer-2021
           image: 'meganav/promo_banner_left-second-category.jpg'
         - subtitle: Special Offers
           title: Get up to 30% off
@@ -65,8 +65,8 @@ default:
           :url: /t/sportswear/hats
       promo_banners:
         - subtitle: New collection
-          title: Autumm 2020
-          url: /t/new-collection/Autumm-2020
+          title: The best 2021 sportswear equipment 
+          url: /t/new-collection/sportswear
           image: 'meganav/promo_banner_left-third-category.jpg'
         - subtitle: Special Offers
           title: Get up to 30% off
