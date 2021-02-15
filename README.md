@@ -6,6 +6,7 @@
 
 * System dependencies
   [Spree](https://github.com/spree)
+  [Spree static content](https://github.com/spree-contrib/spree_static_content)
 * Configuration
   - Create and manage secrets as described in [Rails guides](https://guides.rubyonrails.org/security.html#environmental-security)
   - Use Docker compose to start the app as described in [Docker docs](https://docs.docker.com/compose/rails)
@@ -18,6 +19,7 @@
 
 * How to run the test suite
 - The test suite is automatically run on travis
+- To run tests locally run `RAILS_ENV=development bundle exec rspec spec`
 
 * Services (job queues, cache servers, search engines, etc.)
 
