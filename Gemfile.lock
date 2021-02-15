@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/spree-contrib/spree_static_content.git
+  revision: 63aedde397590b0e48ace934295522b29441e444
+  specs:
+    spree_static_content (4.2.0)
+      deface (~> 1.5)
+      spree_core (>= 3.7.0, < 5.0)
+      spree_extension
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -484,6 +493,7 @@ DEPENDENCIES
   spree (~> 4.1)
   spree_auth_devise (~> 4.1)
   spree_gateway (~> 3.7)
+  spree_static_content!
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
