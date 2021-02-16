@@ -35,6 +35,8 @@ gem "aws-sdk-s3", require: false
 gem 'spree', '~> 4.1'
 gem 'spree_auth_devise', '~> 4.1'
 gem 'spree_gateway', '~> 3.7'
+gem 'spree_static_content', github: 'spree-contrib/spree_static_content'
+gem 'deface', require: true
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
