@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_16_145228) do
+ActiveRecord::Schema.define(version: 2021_02_18_212121) do
 
   create_table "action_mailbox_inbound_emails", force: :cascade do |t|
     t.integer "status", default: 0, null: false
@@ -1088,7 +1088,9 @@ ActiveRecord::Schema.define(version: 2021_02_16_145228) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "engine", default: 0, null: false
+    t.integer "store_id"
     t.index ["active"], name: "index_spree_trackers_on_active"
+    t.index ["store_id"], name: "index_spree_trackers_on_store_id"
   end
 
   create_table "spree_users", force: :cascade do |t|
