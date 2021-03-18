@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem "aws-sdk-s3", require: false
+gem 'newrelic_rpm'
 
 gem 'spree', '~> 4.1'
 gem 'spree_auth_devise', '~> 4.1'
