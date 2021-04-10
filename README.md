@@ -1,8 +1,8 @@
 # README
 [![Build Status](https://travis-ci.com/LucaDev13/spree_docker_hekoku.svg?token=zVcspxHVN1YZiAsuEfi5&branch=master)](https://travis-ci.com/LucaDev13/spree_docker_hekoku)
 
-* Ruby version ruby-2.7.0
-* Rails 6.0.3.3
+* Ruby version ruby-3.0.0
+* Rails 6.1.3.1
 
 * System dependencies
   [Spree](https://github.com/spree)
