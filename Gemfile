@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.0'
+ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.0'
@@ -11,8 +11,8 @@ gem 'pg'
 gem 'puma', '~> 5.0.4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5'
-# Use specific version of sassc per https://github.com/sass/sassc-ruby/issues/153
-gem 'sassc', '~> 2.1.0'
+# only needed for MacOS and Ruby 3.0
+gem 'sassc', github: 'sass/sassc-ruby', branch: 'master' 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
