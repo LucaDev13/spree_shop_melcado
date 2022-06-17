@@ -6,15 +6,6 @@ GIT
     sassc (2.4.0)
       ffi (~> 1.9)
 
-GIT
-  remote: https://github.com/spree-contrib/spree_static_content.git
-  revision: 57953abd2d2151aa94d2db16e040243a48496436
-  specs:
-    spree_static_content (4.2.0)
-      deface (~> 1.5)
-      spree_core (>= 3.7.0, < 5.0)
-      spree_extension
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -502,7 +493,7 @@ DEPENDENCIES
   newrelic_rpm
   pg
   puma (~> 5.0.4)
-  rails (~> 6.1.6)
+  rails (~> 6.1.0)
   rspec-rails (~> 4.0.1)
   sass-rails (~> 5)
   sassc!
@@ -511,7 +502,6 @@ DEPENDENCIES
   spree_auth_devise (~> 4.3)
   spree_gateway (~> 3.9)
   spree_i18n (~> 5.0)
-  spree_static_content!
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
