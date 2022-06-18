@@ -16,3 +16,4 @@ test:
 production:
   <<: *default
   url: <%= Rails.application.credentials.DATABASE_URL %>
+  sslmode: prefer
