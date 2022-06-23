@@ -9,8 +9,6 @@ gem 'rails', '6.1.3.1'
 gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 5.0.4'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5'
 # only needed for MacOS and Ruby 3.0
 gem 'sassc', github: 'sass/sassc-ruby', branch: 'master' 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
