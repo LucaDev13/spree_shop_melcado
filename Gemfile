@@ -35,7 +35,6 @@ gem 'spree', '4.2.1'
 gem 'spree_auth_devise', '~> 4.3'
 gem 'spree_gateway', '~> 3.9'
 gem 'spree_i18n', '~> 5.0'
-gem 'spree_static_content', github: 'spree-contrib/spree_static_content'
 gem 'deface', require: true
 
 group :development, :test do
