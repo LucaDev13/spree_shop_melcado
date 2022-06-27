@@ -87,7 +87,7 @@ GEM
     awesome_nested_set (3.5.0)
       activerecord (>= 4.0.0, < 7.1)
     aws-eventstream (1.2.0)
-    aws-partitions (1.600.0)
+    aws-partitions (1.601.0)
     aws-sdk-core (3.131.2)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.525.0)
@@ -254,9 +254,9 @@ GEM
       actionmailer (>= 3)
       premailer (~> 1.7, >= 1.7.9)
     public_suffix (4.0.7)
-    puma (5.0.4)
+    puma (5.6.4)
       nio4r (~> 2.0)
-    puma (5.0.4-java)
+    puma (5.6.4-java)
       nio4r (~> 2.0)
     rabl (0.14.5)
       activesupport (>= 2.3.14)
@@ -492,7 +492,7 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   newrelic_rpm
   pg
-  puma (~> 5.0.4)
+  puma (= 5.6.4)
   rails (= 6.1.5.1)
   rspec-rails (~> 4.0.1)
   sassc!
