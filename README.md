@@ -1,8 +1,8 @@
 # README
 [![Build Status](https://travis-ci.com/LucaDev13/spree_shop_melcado.svg?token=zVcspxHVN1YZiAsuEfi5&branch=master)](https://travis-ci.com/LucaDev13/spree_shop_melcado.svg)
 
-* Ruby version ruby-3.0.0
-* Rails 6.1.3.1
+* Ruby version ruby-3.0.4
+* Rails 6.1.5.1
 
 * System dependencies
   [Spree](https://github.com/spree)
