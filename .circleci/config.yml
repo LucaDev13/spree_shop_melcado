@@ -31,10 +31,16 @@ jobs:
       - run:
           name: "Run tests"
           command: docker-compose run web bundle exec rspec
-
-
-  # deploy:
-  #   steps:
+  deploy:
+    steps:
+      - checkout
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+            heroku run rails db:migrate
+            sleep 5 # sleep for 5 seconds to wait for dynos
+            heroku restart
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -42,3 +48,4 @@ workflows:
   test-deploy-workflow:
     jobs:
       - test
+      - deploy
