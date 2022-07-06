@@ -40,7 +40,7 @@ jobs:
       - run:
           name: Deploy to Heroku with ORB
           command: 
-            - heroku/deploy-via-git
+            - heroku/deploy-via-git:
               post-steps:
                 - run: heroku run rails db:migrate
 
@@ -51,4 +51,3 @@ workflows:
     jobs:
       - test
       - deploy 
-      
