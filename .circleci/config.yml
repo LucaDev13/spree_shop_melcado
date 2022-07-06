@@ -33,21 +33,19 @@ jobs:
       - run:
           name: "Run tests"
           command: docker-compose run web bundle exec rspec
+
   deploy:
     executor: heroku/default
     steps:
       - checkout
+      - heroku/deploy-via-git
       - run:
-          name: Deploy to Heroku with ORB
-          command: 
-            - heroku/deploy-via-git:
-              post-steps:
-                - run: heroku run rails db:migrate
-
+          command: heroku run rails db:migrate
+          
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   test-deploy-workflow:
     jobs:
       - test
-      - deploy 
+      - deploy
