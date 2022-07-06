@@ -2,6 +2,8 @@
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 
+orbs:
+  heroku: circleci/heroku@1.2.6 # Invoke the Heroku orb
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
@@ -20,7 +22,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Build dockerized app and run tests"
+          name: "Build dockerized app"
           command: |
                   docker-compose build
                   docker-compose up -d
@@ -32,15 +34,15 @@ jobs:
           name: "Run tests"
           command: docker-compose run web bundle exec rspec
   deploy:
+    executor: heroku/default
     steps:
       - checkout
       - run:
-          name: Deploy Master to Heroku
-          command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
-            heroku run rails db:migrate
-            sleep 5 # sleep for 5 seconds to wait for dynos
-            heroku restart
+          name: Deploy to Heroku with ORB
+          command: 
+            - heroku/deploy-via-git
+              post-steps:
+                - run: heroku run rails db:migrate
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -48,4 +50,5 @@ workflows:
   test-deploy-workflow:
     jobs:
       - test
-      - deploy
+      - deploy 
+      
