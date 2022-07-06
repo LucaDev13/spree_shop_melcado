@@ -13,8 +13,6 @@ jobs:
         type: string
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
-    # docker:
-    #   - image: ruby:3.0.0
     machine:
       image: ubuntu-2004:2022.04.2
     # Add steps to the job
