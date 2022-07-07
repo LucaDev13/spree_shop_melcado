@@ -40,7 +40,7 @@ jobs:
       - checkout
       - heroku/deploy-via-git
       - run:
-          command: rails db:migrate
+          command: heroku run rake db:migrate
           
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
