@@ -32,7 +32,7 @@ gem "aws-sdk-s3", require: false
 gem 'newrelic_rpm'
 
 gem 'spree', '4.2.1'
-gem 'spree_auth_devise', '~> 4.3'
+gem 'spree_auth_devise', '4.2.1'
 gem 'spree_gateway', '~> 3.9'
 gem 'spree_i18n', '~> 5.0'
 gem 'deface', require: true
