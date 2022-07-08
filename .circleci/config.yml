@@ -41,7 +41,8 @@ workflows:
     jobs:
       - test
       - heroku/deploy-via-git:
-          requires: test
+          requires: 
+            - test
           post-steps:
             - run: heroku run rails db:migrate -a $HEROKU_APP_NAME
         
