@@ -42,5 +42,5 @@ workflows:
       - test
       - heroku/deploy-via-git:
           post-steps:
-            - run: heroku run rails db:migrate
+            - run: heroku run rails db:migrate -a $HEROKU_APP_NAME
         
