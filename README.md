@@ -1,12 +1,11 @@
 # README
-[![Build Status](https://travis-ci.com/LucaDev13/spree_shop_melcado.svg?token=zVcspxHVN1YZiAsuEfi5&branch=master)](https://travis-ci.com/LucaDev13/spree_shop_melcado.svg)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/LucaDev13/spree_shop_melcado/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/LucaDev13/spree_shop_melcado/tree/master)
 
 * Ruby version ruby-3.0.4
 * Rails 6.1.5.1
 
 * System dependencies
   [Spree](https://github.com/spree)
-  [Spree static content](https://github.com/spree-contrib/spree_static_content)
 * Configuration
   - Create and manage secrets as described in [Rails guides](https://guides.rubyonrails.org/security.html#environmental-security)
   - Use Docker compose to start the app as described in [Docker docs](https://docs.docker.com/compose/rails)
@@ -18,10 +17,11 @@
  - run `heroku run rails db:create`
 
 * How to run the test suite
-- The test suite is automatically run on travis
+- The test suite is automatically run on CircleCI
 - To run tests locally run `RAILS_ENV=development bundle exec rspec spec`
 
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+  Automated deployment from CircleCI to Heroku. See .circleci/config.yml
 
