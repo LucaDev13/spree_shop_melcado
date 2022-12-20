@@ -31,10 +31,10 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem "aws-sdk-s3", require: false
 gem 'newrelic_rpm'
 
-gem 'spree', '4.2.1'
-gem 'spree_auth_devise', '4.2.1'
-gem 'spree_gateway', '~> 3.9'
-gem 'spree_i18n', '~> 5.0'
+gem 'spree', '4.3.0'
+gem 'spree_auth_devise', '4.3.0'
+gem 'spree_gateway', '~> 3.9', '>= 3.9.4'
+gem 'spree_i18n', '~> 5.0', '>= 5.0.1'
 gem 'deface', require: true
 
 group :development, :test do
