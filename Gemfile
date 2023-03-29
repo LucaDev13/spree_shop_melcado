@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '6.1.5.1'
+gem 'rails', '6.1.7.3'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
@@ -33,8 +33,8 @@ gem 'newrelic_rpm'
 
 gem 'spree', '4.2.1'
 gem 'spree_auth_devise', '4.2.1'
-gem 'spree_gateway', '~> 3.9'
-gem 'spree_i18n', '~> 5.0'
+gem 'spree_gateway', '~> 3.9', '>= 3.9.4'
+gem 'spree_i18n', '~> 5.0', '>= 5.0.1'
 gem 'deface', require: true
 
 group :development, :test do
