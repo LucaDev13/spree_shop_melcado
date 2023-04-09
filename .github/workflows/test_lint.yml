@@ -39,6 +39,6 @@ jobs:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
       # Add or replace any other lints here
       - name: Security audit application code
-        run: bin/brakeman -q -w2
+        run: brakeman
       - name: Lint Ruby files
-        run: bin/rubocop --parallel
+        run: rubocop --parallel
