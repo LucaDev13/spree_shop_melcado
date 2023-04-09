@@ -27,6 +27,8 @@ jobs:
   lint:
     needs: test
     runs-on: ubuntu-latest
+    env:
+      RAILS_ENV: test
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
