@@ -1,0 +1,54 @@
+name: Deploy to Digital Ocean
+on:
+  release:
+  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Compose
+        uses: docker/compose-cli-action@v0.7.2
+        with:
+          compose-version: 3.0.0
+
+      - name: Set up environment variables
+        env:
+          RAILS_ENV: production
+          SECRET_KEY_BASE: ${{ secrets.SECRET_KEY_BASE }}
+          DATABASE_URL: postgres://${{ secrets.DB_USER }}:${{ secrets.DB_PASS }}@${{ secrets.DB_HOST }}/${{ secrets.DB_NAME }}
+          DO_API_TOKEN: ${{ secrets.DO_API_TOKEN }}
+          APP_DOMAIN: shop.melcado.com
+          APP_URL: https://${{ secrets.APP_DOMAIN }}
+          APP_NAME: Melcado Shop
+        run: |
+          echo "RAILS_ENV=${RAILS_ENV}" >> .env
+          echo "SECRET_KEY_BASE=${SECRET_KEY_BASE}" >> .env
+          echo "DATABASE_URL=${DATABASE_URL}" >> .env
+          echo "DO_API_TOKEN=${DO_API_TOKEN}" >> .env
+          echo "APP_DOMAIN=${APP_DOMAIN}" >> .env
+          echo "APP_URL=${APP_URL}" >> .env
+          echo "APP_NAME=${APP_NAME}" >> .env
+
+      - name: Log in to Digital Ocean Container Registry
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DO_API_TOKEN }}
+          command: doctl registry login
+
+      - name: Build and push Docker images
+        run: |
+          docker-compose build
+          docker tag melcado-shop:latest registry.digitalocean.com/${{ secrets.DO_REGISTRY }}/melcado-shop:latest
+          docker push registry.digitalocean.com/${{ secrets.DO_REGISTRY }}/melcado-shop:latest
+
+      - name: Deploy to Digital Ocean
+        uses: appleboy/ssh-action@v1.3.3
+        with:
+          host: ${{ secrets.DO_HOST }}
+          username: ${{ secrets.DO_USERNAME }}
+          key: ${{ secrets.DO_PRIVATE_KEY }}
+          script: |
+            ssh -o StrictHostKeyChecking=no ${{ secrets.DO_USERNAME }}@${{ secrets.DO_HOST }} "cd /var/www/melcado-shop && DOCKER_IMAGE=registry.digitalocean.com/${{ secrets.DO_REGISTRY }}/melcado-shop docker-compose pull && docker-compose up -d"
