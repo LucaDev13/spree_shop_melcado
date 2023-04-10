@@ -5,8 +5,6 @@ ruby '3.0.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '6.1.5.1'
-# Use postgresql as the database for Active Record
-gem 'pg'
 # Use Puma as the app server
 gem 'puma', '5.6.4'
 # only needed for MacOS and Ruby 3.0
@@ -43,6 +41,11 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.1'
 end
 
+group :production do
+  # Use postgresql as the database for Active Record
+  gem 'pg'
+end
+
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
@@ -59,6 +62,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'brakeman'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
