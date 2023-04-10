@@ -7,7 +7,7 @@ on:
   push:
   pull_request:
 jobs:
-  test:
+  build_and_test:
     runs-on: ubuntu-latest
     env:
       RAILS_ENV: test
@@ -24,8 +24,8 @@ jobs:
       - name: Run tests
         run: docker-compose run web bundle exec rspec
 
-  lint:
-    needs: test
+  static_analisis:
+    needs: build_and_test
     runs-on: ubuntu-latest
     env:
       RAILS_ENV: test
