@@ -45,7 +45,7 @@ jobs:
           docker push registry.digitalocean.com/${{ secrets.DO_REGISTRY }}/melcado-shop:latest
 
       - name: Deploy to Digital Ocean
-        uses: appleboy/ssh-action@v1.3.3
+        uses: appleboy/ssh-action@v0.1.9
         with:
           host: ${{ secrets.DO_HOST }}
           username: ${{ secrets.DO_USERNAME }}
