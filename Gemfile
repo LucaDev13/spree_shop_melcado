@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '6.1.5.1'
+gem 'rails', '6.1.6'
 # Use Puma as the app server
 gem 'puma', '5.6.4'
 # only needed for MacOS and Ruby 3.0
@@ -29,8 +29,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem "aws-sdk-s3", require: false
 gem 'newrelic_rpm'
 
-gem 'spree', '4.2.1'
-gem 'spree_auth_devise', '4.2.1'
+gem 'spree', '4.3.0'
+gem 'spree_auth_devise', '4.3.0'
 gem 'spree_gateway', '~> 3.9'
 gem 'spree_i18n', '~> 5.0'
 gem 'deface', require: true
