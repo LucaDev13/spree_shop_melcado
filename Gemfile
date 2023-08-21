@@ -6,7 +6,7 @@ ruby '3.0.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '6.1.5.1'
 # Use Puma as the app server
-gem 'puma', '5.6.4'
+gem 'puma', '5.6.7'
 # only needed for MacOS and Ruby 3.0
 gem 'sassc', github: 'sass/sassc-ruby', branch: 'master' 
 # Swithc from webpacker to jsbundling-rails
