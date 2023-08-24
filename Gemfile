@@ -4,13 +4,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '6.1.5.1'
+gem 'rails', '6.1.7.5'
 # Use Puma as the app server
 gem 'puma', '5.6.4'
 # only needed for MacOS and Ruby 3.0
 gem 'sassc', github: 'sass/sassc-ruby', branch: 'master' 
 # Swithc from webpacker to jsbundling-rails
-gem 'jsbundling-rails'
+gem 'jsbundling-rails', '>= 1.1.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -29,16 +29,16 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem "aws-sdk-s3", require: false
 gem 'newrelic_rpm'
 
-gem 'spree', '4.2.1'
-gem 'spree_auth_devise', '4.2.1'
-gem 'spree_gateway', '~> 3.9'
-gem 'spree_i18n', '~> 5.0'
+gem 'spree', '4.3.0'
+gem 'spree_auth_devise', '4.3.0'
+gem 'spree_gateway', '~> 3.10', '>= 3.10.0'
+gem 'spree_i18n', '~> 5.1', '>= 5.1.0'
 gem 'deface', require: true
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails', '~> 4.0.1'
+  gem 'rspec-rails', '~> 4.1.0'
 end
 
 group :production do
